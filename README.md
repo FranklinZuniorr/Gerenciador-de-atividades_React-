@@ -1,4 +1,5 @@
-![Protótipo](https://user-images.githubusercontent.com/94902906/201168644-385bc401-10af-449f-8a8d-df47e7ac55bc.PNG)
+![Protótipo](https://user-images.githubusercontent.com/94902906/201170810-f45406c7-c7cb-48ca-a485-76b2a33dbf8c.PNG)
+
 
 
 # Getting Started with Create React App
