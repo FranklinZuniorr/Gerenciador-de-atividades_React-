@@ -1,38 +1,156 @@
-.App {
+
+.display{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(360deg, rgba(103,103,103,1) 0%, rgba(222,222,222,1) 77%, rgba(228,228,228,1) 100%);
+  width: 100%;
+  height: 50rem;
+}
+
+.menu{
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  left: 0px;
+  bottom: 0rem;
+  background: #E2E2E2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mostrador{
+  position: absolute;
+  display: flex;
+  width: 80%;
+  height: 24rem;
+  bottom: 6rem;
+  margin-bottom: 2rem;
+  background: #F8F8F8;
+  opacity: 0.8;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.categorias{
+  background-color: antiquewhite;
+  position: absolute;
+  width: 80%;
+  height: 3.3rem;
+  top: 14rem;
+}
+
+.titulo{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 3rem;
+}
+
+.add{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  top: 0px;
+  margin-right: 5%;
+  background: linear-gradient(180deg, #DADADA 0%, rgba(190, 190, 190, 0) 100%);
+}
+
+.fnc{
+  background-color: #447aaa;
+  width: 80%;
+  height: 6rem;
+  position: absolute;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cat{
+  width: 100%;
+  height: 2rem;
+  background: #F8F8F8;
+  opacity: 0.8;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.7rem;
+  margin-right: 1rem;
+}
+
+.atv{
+  width: 100%;
+  height: 2rem;
+  background: #F8F8F8;
+  opacity: 0.8;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+.btct{
+  background: #2B4B68;
+  border-radius: 11px;
+  border: none;
+  width: 13rem;
+  height: 2rem;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+}
+
+.btat{
+  background: #2C682B;
+  border-radius: 11px;
+  border: none;
+  width: 13rem;
+  height: 2rem;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+}
+
+.texto{
+  background: linear-gradient(to bottom, #FFFFFF 51%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.obs{
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.area{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
