@@ -26,7 +26,8 @@ function App() {
 
   const IcoReact = {
   width: "3.5rem",
-  marginLeft: "1rem"
+  marginLeft: "1rem",
+  cursor: "pointer"
   };
 
   const [displayCat, setDisplayCat] = useState({
@@ -40,8 +41,6 @@ function App() {
       mostra2: atividades[select],
   });
   };
-
-
 
   function dell(x, z){
     select = z;
@@ -252,7 +251,9 @@ function App() {
           <div className="titulo">
               <BiCalendarCheck size={50} color={"#333333"} style={{marginRight: "0.5rem"}}/>
               GERENCIADOR DE <br/> ATIVIDADES FR_ 
-              <img src={foto_franklin} style={IcoReact}></img>
+              <img src={foto_franklin} style={IcoReact} onClick={() => {
+                window.open("https://www.instagram.com/franzn38/?igshid=YmMyMTA2M2Y%3D")
+              }}/>
               <div style={{fontSize: "0.7rem", marginLeft: "0.5rem", width: "9rem"}}>Desenvolvido por Franklin Vieira Barbosa.</div>
           </div>
         </div>
