@@ -1,4 +1,9 @@
-![Protótipo](https://user-images.githubusercontent.com/94902906/201170810-f45406c7-c7cb-48ca-a485-76b2a33dbf8c.PNG)
+* Gerenciador de atividades fr_.
+* Link: https://gerenciadorfr.netlify.app/
+
+![1](https://user-images.githubusercontent.com/94902906/207222028-b5bef422-064e-4071-85a9-9e1efab5512f.PNG)
+![2](https://user-images.githubusercontent.com/94902906/207222029-336b71bf-7036-4d27-9829-5ecc27434980.PNG)
+![3](https://user-images.githubusercontent.com/94902906/207222030-49a15c7e-03d1-4a69-8789-3a90ed72b7bd.PNG)
 
 
 
