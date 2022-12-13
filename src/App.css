@@ -78,7 +78,7 @@
 .mostrador{
   position: absolute;
   display: flex;
-  width: 70%;
+  width: 80%;
   height: 24rem;
   top: 18rem;
   margin-bottom: 2rem;
@@ -92,7 +92,7 @@
 
 .categorias{
   position: absolute;
-  width: 70%;
+  width: 80%;
   height: 3.3rem;
   top: 13.5rem;
   border-radius: 8px;
@@ -135,7 +135,7 @@
 
 .fnc{
   background-color: #447aaa00;
-  width: 70%;
+  width: 80%;
   height: 6rem;
   position: absolute;
   top: 7rem;
