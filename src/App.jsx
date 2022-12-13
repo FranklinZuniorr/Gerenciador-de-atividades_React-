@@ -24,10 +24,6 @@ var test = 0;
 
 function App() {
 
-  
-   
-
-
   const IcoReact = {
   width: "3.5rem",
   marginLeft: "1rem"
@@ -50,7 +46,6 @@ function App() {
   function dell(x, z){
     select = z;
     console.log(x)
-    alert(select)
     categorias.splice(x, 1)
     delete atividades[select];
     categoriasS.splice(x, 1)
@@ -68,7 +63,10 @@ function App() {
 
   function dell2(x){
     console.log(atividades[select][x])
-    delete atividades[select][x]
+    delete atividades[select][x];
+    atividadesS[select].splice(x, 1)
+    console.log(atividadesS)
+    localStorage.setItem("atividades", JSON.stringify(atividadesS));
     console.log(x)
     console.log(atividades[select])
     console.log(atividades[select][x])
@@ -101,7 +99,6 @@ function App() {
     if(test >= filtro.length){
       atividades[select] = [];
       existe();
-      localStorage.setItem("atividades", atividades);
     };
 
   };
@@ -130,18 +127,20 @@ function App() {
     }
 
   };
+  
 
   function st(x){
     select = x;
     console.log(select);
     display();
     existe();
-  };
 
+    for(var z = 0; z < atividadesS[select].length; z++){
+      atividades[select][z] = <Atividade nmCategoria={atividadesS[select][z]} dell2={dell2} number={z}/>;
+    };
+  };
   
   function start() {
-    
-    
 
     if(localStorage.getItem("categorias") == undefined){
     
@@ -172,6 +171,7 @@ function App() {
 
       console.log(categoriasS)
       console.log(atividadesS)
+      console.log(atividades)
       console.log(categorias)
 
       select = "início";
@@ -184,6 +184,18 @@ function App() {
         mostra2: atividades[select],
        })
     };
+
+    if(localStorage.getItem("atividades") != undefined){
+      atividades = JSON.parse(localStorage.getItem("atividades"));
+      atividadesS = JSON.parse(localStorage.getItem("atividades"));
+      for(var z = 0; z < atividadesS[select].length; z++){
+        atividades[select][z] = <Atividade nmCategoria={atividadesS[select][z]} dell2={dell2} number={z}/>;
+      };
+      setDisplayCat({
+        mostra: categorias,
+        mostra2: atividades[select],
+       })
+    }
 
   };
   
@@ -229,6 +241,7 @@ function App() {
     x.current.focus();
   };
   //Referências dos elementos.
+  
 
   return (
 
@@ -298,7 +311,10 @@ function App() {
               if(msgCt2 != ""){
 
               atividades[select][atividades[select].length] = <Atividade nmCategoria={msgCt2} dell2={dell2} number={atividades[select].length}/>;
-              console.log(atividades)
+              atividadesS[select][atividadesS[select].length] = msgCt2;
+              localStorage.setItem("atividades", JSON.stringify(atividadesS));
+
+              console.log(atividadesS)
 
               setDisplayCat({
                 mostra: categorias,
@@ -306,8 +322,6 @@ function App() {
               });
 
               existe();
-
-              localStorage.setItem("atividades", atividades);
 
               console.log(atividades)
               }
@@ -341,9 +355,9 @@ function App() {
         Adicione alguma atividade!
         </div>
       
-        <ScrollArea style={{ height: "22rem", width: "80%", paddingRight: "1rem", paddingLeft: "1rem" }} type="always" scrollbarSize={6} scrollHideDelay={2500}>
+        <ScrollArea style={{ height: "22rem", width: "80%", paddingRight: "1rem", paddingLeft: "1rem", borderRadius: "10% 10% 50% 50% / 0% 0% 9% 9% " }} type="always" scrollbarSize={6} scrollHideDelay={2500}>
           {
-            <div>
+            <div style={{display: "flex", flexDirection: "column-reverse"}}>
               {displayCat.mostra2}
             </div>
           }
