@@ -105,12 +105,12 @@ function App() {
 
   const [msgCt, setMsgCt] = useState("");
   const getText = event => {
-    setMsgCt(event.target.value);
+    setMsgCt(event.target.value.toLowerCase());
   };
 
   const [msgCt2, setMsgCt2] = useState("");
   const getText2 = event => {
-    setMsgCt2(event.target.value);
+    setMsgCt2(event.target.value.toLowerCase());
   };
 
   const [obs, setObs] = useState({display: "none"});
