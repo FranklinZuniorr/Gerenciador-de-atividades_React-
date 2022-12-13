@@ -70,20 +70,25 @@ function App() {
     console.log(atividades[select])
     console.log(atividades[select][x])
 
+    atividades = JSON.parse(localStorage.getItem("atividades"));
+    for(let z = 0; z < atividadesS[select].length; z++){
+      atividades[select][z] = <Atividade nmCategoria={atividadesS[select][z]} dell2={dell2} number={z}/>;
+    };
+
     display();
     existe();
 
     var filtro = [];
     console.log("tamanho:" + atividades[select].length);
 
-    for(var a = 0; a < atividades[select].length; a++){
+    for(let a = 0; a < atividades[select].length; a++){
 
       filtro[a] = "" + atividades[select][a];
       console.log(filtro);
 
     };
 
-    for(var b = 0; b < filtro.length; b++){
+    for(let b = 0; b < filtro.length; b++){
 
       if(filtro[b].toString() == "undefined"){
         test++;
@@ -134,7 +139,7 @@ function App() {
     display();
     existe();
 
-    for(var z = 0; z < atividadesS[select].length; z++){
+    for(let z = 0; z < atividadesS[select].length; z++){
       atividades[select][z] = <Atividade nmCategoria={atividadesS[select][z]} dell2={dell2} number={z}/>;
     };
   };
@@ -162,7 +167,7 @@ function App() {
       atividades = JSON.parse(localStorage.getItem("atividades"));
       atividadesS = JSON.parse(localStorage.getItem("atividades"));
 
-      for(var x = 0; x < categoriasS.length; x++){
+      for(let x = 0; x < categoriasS.length; x++){
         
         categorias[x] = <Categoria nmCategoria={categoriasS[x]} number={x} dell={dell} st={st} seleciona={seleciona}/>
 
@@ -187,7 +192,7 @@ function App() {
     if(localStorage.getItem("atividades") != undefined){
       atividades = JSON.parse(localStorage.getItem("atividades"));
       atividadesS = JSON.parse(localStorage.getItem("atividades"));
-      for(var z = 0; z < atividadesS[select].length; z++){
+      for(let z = 0; z < atividadesS[select].length; z++){
         atividades[select][z] = <Atividade nmCategoria={atividadesS[select][z]} dell2={dell2} number={z}/>;
       };
       setDisplayCat({
@@ -254,7 +259,7 @@ function App() {
               <img src={foto_franklin} style={IcoReact} onClick={() => {
                 window.open("https://www.instagram.com/franzn38/?igshid=YmMyMTA2M2Y%3D")
               }}/>
-              <div style={{fontSize: "0.7rem", marginLeft: "0.5rem", width: "9rem"}}>Desenvolvido por Franklin Vieira Barbosa.</div>
+              <div style={{fontSize: "0.7rem", marginLeft: "0.5rem", width: "8rem"}}>Desenvolvido por Franklin Vieira Barbosa.</div>
           </div>
         </div>
       </header>
