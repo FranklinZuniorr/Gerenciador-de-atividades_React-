@@ -8,10 +8,11 @@
   height: 50rem;
 }
 
+@media (min-width: 490px){
 .menu{
   position: absolute;
   width: 100%;
-  height: 4rem;
+  height: 4.5rem;
   left: 0px;
   top: 0px;
   background: #ffffff;
@@ -19,7 +20,24 @@
   align-items: center;
   justify-content: flex-end;
 }
+}
 
+@media (max-width: 490px){
+.menu{
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  border-radius: 10% 10% 50% 50% / 0% 0% 29% 29%;
+  left: 0px;
+  top: -7px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+@media (min-width: 490px){
 .footer{
   position: absolute;
   width: 100%;
@@ -31,6 +49,24 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 1rem;
+}
+}
+
+@media (max-width: 490px){
+.footer{
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  left: 0px;
+  bottom: 0rem;
+  background: #E2E2E2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
 }
 
 .mostrador{
@@ -38,7 +74,7 @@
   display: flex;
   width: 80%;
   height: 24rem;
-  bottom: 6rem;
+  top: 18rem;
   margin-bottom: 2rem;
   background: #F8F8F8;
   opacity: 0.8;
@@ -49,18 +85,34 @@
 }
 
 .categorias{
-  background-color: antiquewhite;
+  background-color: rgb(108 183 199 / 14%);
   position: absolute;
   width: 80%;
   height: 3.3rem;
-  top: 14rem;
+  top: 13.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
 }
 
+@media (min-width: 490px){
 .titulo{
+  transform: scale(0.9);
   position: absolute;
   display: flex;
   align-items: center;
-  left: 3rem;
+  left: 0rem;
+}
+}
+
+@media (max-width: 490px){
+.titulo{
+  transform: scale(0.85);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+}
 }
 
 .add{
@@ -76,7 +128,7 @@
 }
 
 .fnc{
-  background-color: #447aaa;
+  background-color: #447aaa00;
   width: 80%;
   height: 6rem;
   position: absolute;
